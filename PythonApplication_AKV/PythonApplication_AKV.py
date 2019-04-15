@@ -2,6 +2,16 @@ from OpenSSL import crypto
 import os
 from azure.keyvault import KeyVaultClient, KeyVaultAuthentication
 from azure.common.credentials import ServicePrincipalCredentials
+import wincertstore
+
+
+# Get cert from windows cert store
+for storename in ("CA", "ROOT"):
+    with wincertstore.CertSystemStore("My") as store:
+        for cert in store.itercerts(usage=wincertstore.SERVER_AUTH):
+            if(cert.get_name() == "VSTSICMSync-TEST"):
+                print(cert.get_name())
+
 
 # Get secret from AKV
 subscription_id = '4743ef1d-749f-46e9-ae08-c6c2ea7f22f6'

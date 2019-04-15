@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>006005c6-c586-4efc-89ca-fbbfe23ba440</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonApplication_AKV.py</StartupFile>
+    <StartupFile>RSAEncryptionUsingX509Cert.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PythonApplication_AKV.py" />
+    <Compile Include="RSAEncryptionTest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RSAEncryptionUsingX509Cert.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="..\..\..\..\..\Envs\HelloWorld\">
