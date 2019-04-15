@@ -12,7 +12,6 @@ for storename in ("CA", "ROOT"):
             if(cert.get_name() == "VSTSICMSync-TEST"):
                 print(cert.get_name())
 
-
 # Get secret from AKV
 subscription_id = '4743ef1d-749f-46e9-ae08-c6c2ea7f22f6'
 credentials = ServicePrincipalCredentials(
