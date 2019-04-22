@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "${env:CONDA_PREFIX}\\python.exe",
+    "python.condaPath": "${env:CONDA_EXE}",
+    "python.analysis.openFilesOnly": false,
+    "python.unitTest.pyTestEnabled": true,
+    "python.linting.banditEnabled": true,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.oml": true,
+        "**/.coverage": true,
+        "**/*.egg-info": true,
+        "**/build": true,
+        "**/dist": true,
+    },
+}
