@@ -30,6 +30,7 @@ for storename in ("CA", "ROOT", "My"):
             logger.info("Processing certificate: %s" % certName)
             # get pem
             pem = cert.get_pem()
+            # Convert to .der, and decode it in order to get cert thumbprint
             encodedDer = ''.join(pem.split("\n")[1:-2])
             logger.info("Encoded der certificate: %s" % encodedDer)
             der = base64.b64decode(encodedDer)
