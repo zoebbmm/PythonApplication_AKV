@@ -1,0 +1,36 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - TestOMLSampleCode/*
+    exclude:
+      - TestOMLSampleCode/README.md
+      - TestOMLSampleCode/.azure-pipelines/*
+      - TestOMLSampleCode/.gitignore
+      - TestOMLSampleCode/.vscode/*
+
+jobs:
+- job: Build_Test_Publish
+  timeoutInMinutes: 20
+  pool:
+    vmImage: vs2017-win2016
+  variables:
+    projectName: TestOMLSampleCode
+    projectDirectory: TestOMLSampleCode
+    EnableDetectorPip: true
+
+  steps:
+  - template: steps/conda-env.yml
+
+  - template: steps/run-tests.yml
+
+  - task: ms.vss-governance-buildtask.governance-build-task-component-detection.ComponentGovernanceComponentDetection@0
+    displayName: Component Detection
+
+  - template: steps/package.yml
+
+  - template: steps/code-signing.yml
+
+  - template: steps/publish.yml

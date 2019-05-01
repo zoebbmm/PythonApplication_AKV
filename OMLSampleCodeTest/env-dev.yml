@@ -1,0 +1,11 @@
+name: OMLSampleCodeTest
+channels:
+  
+dependencies:
+  - python=3.6
+  - scikit-learn
+  - pytest-cov
+  - pylint
+  - pip:
+    - oml
+    - bandit

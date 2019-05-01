@@ -1,0 +1,17 @@
+name: OMLSampleCodeTest
+
+version: 1.0.0
+
+owner: REDMOND\zhowe
+
+language: python
+
+flavor:
+  name: scikit-learn
+  version: latest
+
+schemas:
+  input: null
+  output: null
+
+platform: null

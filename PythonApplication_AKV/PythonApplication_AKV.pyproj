@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>006005c6-c586-4efc-89ca-fbbfe23ba440</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>RSAEncryptionUsingX509Cert.py</StartupFile>
+    <StartupFile>PredictionV2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,11 +22,29 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Prediction.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PredictionV2.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PredictionV3.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonApplication_AKV.py" />
     <Compile Include="RSAEncryptionTest.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RSAEncryptionUsingX509Cert.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestPythonCode.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrainingModel.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TrainingModelV2.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -35,6 +53,15 @@
       <Id>HelloWorld</Id>
       <Version>3.6</Version>
       <Description>HelloWorld (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+    <Interpreter Include="..\..\..\..\..\Envs\omlonboardingpipVE\">
+      <Id>omlonboardingpipVE</Id>
+      <Version>3.6</Version>
+      <Description>omlonboardingpipVE (Python 3.6 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
